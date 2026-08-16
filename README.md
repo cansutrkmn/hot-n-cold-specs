@@ -1,93 +1,99 @@
 # Hot N Cold
 
-A spatial memory experience for SPECS that recognizes an everyday object, remembers its location during the current session, and later guides the wearer back using a playful hot-and-cold mechanic.
+**A spatial memory for the things you forget.**
 
-## How It Works
+Hot N Cold is a Spectacles spatial computing prototype that helps people remember everyday objects and where they left them.
 
-The wearer centers an everyday object in view and selects **Remember This**. The experience then follows this flow:
+Instead of asking the user to manually categorize their physical environment, Hot N Cold uses AI vision to identify the object they are looking at and associates that object with a spatial position.
 
-**Remember This → AI recognizes the object → center-view WorldQuery resolves its spatial location → user confirms the object → Find Item → COLD / COOL / WARM / HOT → FOUND**
+Later, the user can open their Memories, select an object, and follow an environmental thermal crystal trail back to its remembered location.
 
-The confirmation marker shows the proposed location before it is saved. During the search, the destination remains hidden so the wearer navigates through temperature and trend feedback rather than a direct pointer.
+> You don’t organize the objects. You organize your memory of where they are.
 
-## Why SPECS
+## Experience
 
-Hot N Cold depends on the relationship between a person, an object, and a place in the physical world. SPECS makes that relationship available hands-free: the wearer can look directly at an object to identify and locate it, walk naturally through the environment, and receive spatial feedback without holding a phone or repeatedly checking a screen. The result turns an ordinary memory task into a lightweight spatial interaction.
+1. Look at an everyday object.
+2. Choose **Remember This**.
+3. Gemini vision identifies the object.
+4. Hot N Cold resolves the corresponding spatial position.
+5. Confirm the detected object.
+6. The object is added to **Memories**.
+7. Select a remembered object later.
+8. Follow the crystal trail as it changes from cold blue to warm amber/red.
+9. At the remembered position, Hot N Cold presents a localized **There it is** confirmation.
 
-## CLAD Development
+## Spatial Memories
 
-The experience was designed, built, tested, debugged, and refined through CLAD. Lens Studio Preview provided a deterministic test environment for recognition, target placement, interaction flow, visual temperature states, marker lifecycle, and runtime-log verification. Adversarial distance sequences were also used to verify both **Getting warmer** and **Getting colder** behavior. Product intent and experience decisions came from the creator; CLAD supported implementation and verification.
+Hot N Cold supports multiple session-scoped memories.
 
-## Architecture
+Each memory stores:
 
-- **HotNColdController** — owns the experience state machine and coordinates recognition, location, storage, guidance, and UI.
-- **ObjectRecognizer** — answers what the centered object is, with separate device and Preview implementations.
-- **ObjectLocationResolver** — answers where the centered object is, using WorldQuery on device and a deterministic target in Preview.
-- **SpatialMemoryStore** — stores the object label and resolved target position, with an anchor-ready data boundary.
-- **TemperatureGuidance** — classifies distance into temperature bands and produces normalized heat.
-- **HotNColdVisualGuidance** — renders lightweight peripheral color, pulse, and activity feedback from normalized heat.
-- **HotNColdUI** — presents the minimal confirmation, search, recovery, and completion interface.
+- a human-readable AI-generated label
+- a world-space position
+- a surface normal
+- a session timestamp
 
-## AI Object Recognition
+The current implementation supports up to six memories. Re-recognizing the same normalized label updates its remembered position instead of creating a duplicate.
 
-On SPECS, the recognition path is:
+The Memories drawer can also be invoked through a left-palm interaction. In Preview, the drawer is positioned relative to the detected left palm while remaining camera-facing.
 
-**Spectacles Camera → JPEG encoding → Gemini through Remote Service Gateway**
+## AI Recognition
 
-Lens Studio Preview uses a deterministic **Keys** mock so the complete interaction can be tested without relying on a network request or physical glasses. Device recognition failures do not silently invent a label; the experience reports the failure and offers a working **Try Again** recovery.
+The recognition path uses:
 
-## Spatial Location
+**Spectacles Camera → Remote Service Gateway → Gemini 2.5 Flash**
 
-On device, `ObjectLocationResolver` casts a center-view ray through Lens Studio's WorldQuery API and uses the resulting real-world surface hit as the proposed object location. Preview uses a deterministic visible debug target for repeatable testing.
+Gemini returns open-ended object detections rather than using a fixed whitelist.
 
-The saved position is the resolved **target position**, not the Camera Object or wearer position. The target marker is visible during confirmation, hidden throughout the search, and briefly revealed again at **FOUND**.
+The selected detection includes a bounding box. Hot N Cold derives an image-space point from that box and uses the camera projection/spatial-query pipeline to associate the recognized object with a position in the environment.
 
-## Hot N Cold Guidance
+## Thermal Crystal Guidance
 
-Distance is converted into a normalized heat value that drives a continuous visual transition from icy blue and calm movement to orange/red and more energetic pulses. The named bands remain available for clarity:
+Navigation intentionally avoids a conventional arrow, compass, or minimap.
 
-**COLD → COOL → WARM → HOT → FOUND**
+Instead, Hot N Cold creates a spatial thermal trail that grows through the environment:
 
-The controller also compares the current distance with the previous distance to report **Getting warmer** or **Getting colder**. Peripheral unlit mesh cues communicate proximity without tinting the camera feed, blocking vision, or pointing directly toward the target.
+**cold blue → cyan → amber → hot coral/red**
 
-## Preview Testing
+As the wearer approaches the remembered position, the trail becomes warmer and more active before converging at the destination.
 
-The release build was verified in Lens Studio Preview with:
+## CLAD / Preview Validation
 
-- the complete happy path from **Remember This** through **FOUND**;
-- an adversarial distance path containing both warmer and colder movement;
-- confirmation, search, and FOUND target-marker lifecycle checks;
-- state-by-state action and dead-affordance checks;
-- final TypeScript compilation and runtime-log inspection with zero final runtime errors.
+The project was developed iteratively with CLAD and tested extensively in Lens Studio Interactive Preview.
 
-## Device Validation Limitations
+Validated Preview behavior includes:
 
-Without physical SPECS hardware, the following could not be directly validated:
+- real Gemini object recognition through Remote Service Gateway
+- AI bounding-box-derived spatial targeting
+- spatial object confirmation
+- session-scoped memory storage
+- multiple simultaneous memories
+- memory selection and target switching
+- environmental thermal crystal guidance
+- COLD → WARM → HOT progression
+- localized FOUND treatment
+- left-palm Memories invocation with LEAF
+- palm-relative Memories drawer placement
 
-- real Camera → Gemini recognition;
-- real-environment WorldQuery hit testing;
-- physical tracking accuracy;
-- final additive-display brightness and color appearance under real-world lighting.
+A production-path Preview test successfully stored multiple real recognized objects, and the multi-memory drawer/search architecture was also exercised independently. :contentReference[oaicite:0]{index=0} :contentReference[oaicite:1]{index=1}
 
-## Requirements
+## Current Scope
 
-- Lens Studio 5.23; the project was finalized and verified with Lens Studio 5.23.1.26080420.
-- A SPECS-targeted project with a Perspective Camera and Device Tracking set to World.
-- Spectacles Interaction Kit runtime 0.18.0 (installed Asset Library package metadata: 2.0.0).
-- Spectacles UIKit 2.0.0.
-- RemoteServiceGateway 2.0.0 for the Gemini device path.
-- CameraModule and WorldQueryModule support on SPECS.
-- Internet access and the applicable camera-plus-internet permission flow for live recognition.
-- A valid Google/Gemini credential configured locally in Lens Studio for device recognition.
+This hackathon build intentionally focuses on the core spatial-memory interaction.
 
-## Privacy / Credentials
+Memories are currently session-scoped. Cross-session persistence is not claimed.
 
-API credentials are not included in this repository. The checked-in project contains placeholder credential fields only. Add any required Gemini credential locally in Lens Studio and never commit it, paste it into source files, or include it in screenshots or logs intended for publication.
+Physical Spectacles validation is still required for final device ergonomics, real-world tracking stability, display appearance, and hand-interaction comfort.
 
-## Future Work
+Interactive Preview is useful for development and validation, but it is not a substitute for final hardware testing.
 
-- Persistent spatial anchors.
-- Multiple remembered objects.
-- Voice interaction.
+## Built With
 
-These items are possible extensions and are not implemented in the current release.
+- Lens Studio
+- Spectacles Interaction Kit
+- Spectacles UIKit
+- Remote Service Gateway
+- Gemini 2.5 Flash
+- LEAF
+- TypeScript
+- CLAD
