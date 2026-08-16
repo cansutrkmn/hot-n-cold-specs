@@ -536,3 +536,50 @@ The intended public set contains the Lens project, authored assets, required pac
 - Iteratively refined code and repository documentation in response to creator feedback.
 
 CLAD did not invent the Hot N Cold product concept; it supported the creator by implementing and verifying the specified experience.
+
+## Final Iterations — Multi-memory, hand interaction, and submission validation
+
+### Goal
+
+Turn the working single-object Hot N Cold prototype into a more complete spatial organizer while preserving the validated AI recognition and environmental guidance architecture.
+
+### Creator Direction
+
+The final product direction required:
+
+- multiple remembered everyday objects rather than one active object,
+- a reusable MEMORIES drawer,
+- explicit selection of the object to search for,
+- left-palm access to memories,
+- palm-relative spatial UI placement,
+- preservation of the existing thermal crystal trail,
+- real open-ended AI recognition rather than authored or whitelisted objects,
+- and an end-to-end Preview validation pass before submission.
+
+### What CLAD did
+
+CLAD introduced a session-scoped SpatialMemory model and store, implemented the reusable Memory Drawer, connected selected memories to the existing single trail/search pipeline, and validated the architecture with multiple simultaneous memories.
+
+The final memory model stores the object label, world-space position, normal, and session timestamp. The store supports up to six memories and updates matching normalized labels rather than duplicating them.
+
+CLAD then integrated LEAF-based left-hand testing. The production left-palm trigger uses real SIK hand signals and opens the same existing Memories drawer rather than creating a separate hand-specific UI.
+
+A palm-relative anchoring component was added so the drawer appears next to the left palm while retaining a camera-facing orientation. LEAF Preview tests validated opening, movement/re-anchoring, and closing behavior.
+
+The final Preview validation also exercised the real Gemini / Remote Service Gateway path and production spatial-memory pipeline. Multiple real recognized objects were successfully stored in one validated run, the Memories drawer exposed them simultaneously, and selecting a stored memory drove the existing thermal trail toward that memory.
+
+### Result / Learning
+
+The final hackathon build demonstrates the intended product architecture:
+
+WHAT I LOOK AT
+→ WHAT AI CALLS IT
+→ WHERE THE SYSTEM SAVES IT
+→ MEMORIES
+→ SELECT
+→ THERMAL TRAIL
+→ FOUND
+
+The build remains intentionally session-scoped. Cross-session persistence and physical Spectacles ergonomics are not claimed as validated.
+
+The final submission build contains credential placeholders only. Live Remote Service Gateway credentials were used only during Preview validation and were removed before saving/version control.
