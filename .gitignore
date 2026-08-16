@@ -1,0 +1,39 @@
+# BEGIN Lens Studio managed Agents-Docs block
+.mcp.json
+.cursor/mcp.json
+.vscode/mcp.json
+.codex/config.toml
+.claude/settings.local.json
+# END Lens Studio managed Agents-Docs block
+
+# Local agent instructions (not part of the public Lens repository)
+AGENTS.md
+CLAUDE.md
+
+# Local/generated Lens Studio state and signing material
+Cache/
+Support/
+Workspaces/
+Plugins/
+PluginsUserPreferences/
+*.lock
+spk_debug_key.pem
+.virtual-scene.json
+
+# OS, editor, and transient files
+.DS_Store
+.idea/
+.vscode/
+*.log
+*.tmp
+*.bak
+
+# CLAD Preview tooling not referenced by the authored release Lens
+Packages/AiPreviewAgentInteract.lspkg
+Packages/AiPreviewAgentInteract.lspkg.meta
+Packages/Leaf.lspkg
+Packages/Leaf.lspkg.meta
+
+# Pulled only by the excluded Leaf testing package
+Packages/Bitmoji 3D.lsc
+Packages/Bitmoji 3D.lsc.meta

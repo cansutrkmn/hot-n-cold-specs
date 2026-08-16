@@ -1,0 +1,67 @@
+- !<AssetImportMetadata/a9c13674-68ac-4e0d-a054-83fe6f0b4c53>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 486eca76-ea4f-4e90-bbf0-48f88e7f6018
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 486eca76-ea4f-4e90-bbf0-48f88e7f6018
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 76e497a4-2fda-4d08-8f7b-d15eb0864eaa
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/76e497a4-2fda-4d08-8f7b-d15eb0864eaa>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 14307ad4-a166-4d8e-bb3f-d14452e447fc
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    guidance: false
+    locationResolver: false
+    memory: false
+    previewUseAdversarialPath: false
+    recognizer: false
+    trackedObject: false
+    ui: false
+    visualGuidance: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - ui: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      recognizer: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      locationResolver: !<MappingBased.AssignableType_3> 00000000-0000-0000-0000-000000000000
+      memory: !<MappingBased.AssignableType_4> 00000000-0000-0000-0000-000000000000
+      guidance: !<MappingBased.AssignableType_5> 00000000-0000-0000-0000-000000000000
+      visualGuidance: !<MappingBased.AssignableType_6> 00000000-0000-0000-0000-000000000000
+      previewUseAdversarialPath: false
+      trackedObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input AssignableType_1 ui
+    - // @input AssignableType_2 recognizer
+    - // @input AssignableType_3 locationResolver
+    - // @input AssignableType_4 memory
+    - // @input AssignableType_5 guidance
+    - // @input AssignableType_6 visualGuidance
+    - // @input bool previewUseAdversarialPath
+    - // @input SceneObject trackedObject

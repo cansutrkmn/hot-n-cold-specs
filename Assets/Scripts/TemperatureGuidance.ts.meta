@@ -1,0 +1,55 @@
+- !<AssetImportMetadata/8cd01ee2-7cb5-493e-abf2-0d3f1ccf1989>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> b5ccbd84-5105-4713-91b8-a12ba1df3c07
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> b5ccbd84-5105-4713-91b8-a12ba1df3c07
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> a5c997bf-a1e5-40e7-b55a-bc726ffde6da
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/a5c997bf-a1e5-40e7-b55a-bc726ffde6da>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 3224ef5c-d5e9-46c5-b976-19c36f6ee812
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    coldThresholdCm: false
+    coolThresholdCm: false
+    foundThresholdCm: false
+    warmThresholdCm: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - coldThresholdCm: !<float> 250.000000
+      coolThresholdCm: !<float> 140.000000
+      warmThresholdCm: !<float> 70.000000
+      foundThresholdCm: !<float> 18.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input float coldThresholdCm = 250
+    - // @input float coolThresholdCm = 140
+    - // @input float warmThresholdCm = 70
+    - // @input float foundThresholdCm = 18

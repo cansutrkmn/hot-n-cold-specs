@@ -1,0 +1,55 @@
+- !<AssetImportMetadata/0fac32ee-2329-4bb2-8b44-5a7f46caa331>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> c4ae1481-c3f2-4ba3-a6e0-fa6e19f1e513
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> c4ae1481-c3f2-4ba3-a6e0-fa6e19f1e513
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> bc0f569a-efbd-447b-9312-e51a7aa6abfc
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/bc0f569a-efbd-447b-9312-e51a7aa6abfc>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 6242d798-6fef-49b8-a8f0-1512c1b772cc
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    cameraObject: false
+    maxRayDistanceCm: false
+    previewDebugTarget: false
+    targetMarker: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - cameraObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      targetMarker: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      previewDebugTarget: !<Vec3> {x: 32.000000, y: -18.000000, z: -180.000000}
+      maxRayDistanceCm: !<float> 500.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input SceneObject cameraObject
+    - // @input SceneObject targetMarker
+    - "// @input vec3 previewDebugTarget = {32,-18,-180}"
+    - // @input float maxRayDistanceCm = 500

@@ -1,0 +1,49 @@
+- !<AssetImportMetadata/d02a1250-81b4-4ebe-83ff-a34b2aea0f77>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 8e74df05-9799-4a89-b32a-e3f5ca991fc9
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 8e74df05-9799-4a89-b32a-e3f5ca991fc9
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> a809b7eb-ecce-4afb-aaf5-88133b9f720b
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/a809b7eb-ecce-4afb-aaf5-88133b9f720b>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: c338d248-ff91-449f-9f5f-233b217294d2
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    geminiModel: false
+    previewMockLabel: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - previewMockLabel: Keys
+      geminiModel: gemini-2.0-flash
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input string previewMockLabel = "Keys"'
+    - '// @input string geminiModel = "gemini-2.0-flash"'
