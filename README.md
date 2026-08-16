@@ -1,6 +1,6 @@
 # Hot N Cold
 
-A spatial memory experience for SPECS that recognizes an everyday object, remembers where it was placed, and later guides the wearer back using a playful hot-and-cold mechanic.
+A spatial memory experience for SPECS that recognizes an everyday object, remembers its location during the current session, and later guides the wearer back using a playful hot-and-cold mechanic.
 
 ## How It Works
 
@@ -71,7 +71,7 @@ Without physical SPECS hardware, the following could not be directly validated:
 
 ## Requirements
 
-- Lens Studio 5.23 or later; the project was finalized with Lens Studio 5.23.1.26080420.
+- Lens Studio 5.23; the project was finalized and verified with Lens Studio 5.23.1.26080420.
 - A SPECS-targeted project with a Perspective Camera and Device Tracking set to World.
 - Spectacles Interaction Kit runtime 0.18.0 (installed Asset Library package metadata: 2.0.0).
 - Spectacles UIKit 2.0.0.
