@@ -1,20 +1,20 @@
-- !<AssetImportMetadata/d02a1250-81b4-4ebe-83ff-a34b2aea0f77>
+- !<AssetImportMetadata/9c28ecab-7880-45c6-95bd-7bc46a66c173>
   ImportedAssetIds:
-    TypeScriptAsset: !<reference> 8e74df05-9799-4a89-b32a-e3f5ca991fc9
+    TypeScriptAsset: !<reference> c51d57e0-afaf-4bd9-91fb-0e972446b998
   ImporterName: TypeScriptAssetImporter
-  PrimaryAsset: !<reference> 8e74df05-9799-4a89-b32a-e3f5ca991fc9
+  PrimaryAsset: !<reference> c51d57e0-afaf-4bd9-91fb-0e972446b998
   PackageType: NotAPackage
   LegacyPackagePolicy: ~
   ExtraData:
     {}
   AssetDataMap:
-    TypeScriptAsset: !<own> a809b7eb-ecce-4afb-aaf5-88133b9f720b
+    TypeScriptAsset: !<own> ec94b929-0de7-4e16-92aa-74bc8f13ad20
   DependentFiles:
     []
   ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-- !<TypeScriptAssetData/a809b7eb-ecce-4afb-aaf5-88133b9f720b>
+- !<TypeScriptAssetData/ec94b929-0de7-4e16-92aa-74bc8f13ad20>
   SvgIcon: ""
   SetupScript:
     code: ""
@@ -24,13 +24,12 @@
   VersionPatch: 0
   VersionPrerelease: ""
   UpdateOrder: 0
-  ComponentUid: c338d248-ff91-449f-9f5f-233b217294d2
+  ComponentUid: e30051cc-a5de-451c-a93b-ac2136af15e4
   ExportUid: 00000000-0000-0000-0000-000000000000
   PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
-    centralTolerance1000: false
-    geminiModel: false
-    minimumConfidence: false
+    controller: false
+    drawerAnchor: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
@@ -40,13 +39,11 @@
   Attachments:
     []
   DefaultScriptInputs:
-    - geminiModel: gemini-2.0-flash
-      minimumConfidence: 0.450000
-      centralTolerance1000: !<float> 220.000000
+    - controller: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      drawerAnchor: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
-    - '// @input string geminiModel = "gemini-2.5-flash"'
-    - // @input float minimumConfidence = 0.45
-    - // @input float centralTolerance1000 = 220
+    - // @input AssignableType_1 controller
+    - // @input AssignableType_2 drawerAnchor

@@ -28,9 +28,10 @@
   ExportUid: 00000000-0000-0000-0000-000000000000
   PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
-    cameraObject: false
+    deviceTracking: false
+    markerMaterial: false
+    markerMesh: false
     maxRayDistanceCm: false
-    previewDebugTarget: false
     targetMarker: false
   ScriptTypesHidden:
     {}
@@ -41,15 +42,17 @@
   Attachments:
     []
   DefaultScriptInputs:
-    - cameraObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+    - deviceTracking: !<reference.DeviceTracking> 00000000-0000-0000-0000-000000000000
       targetMarker: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      previewDebugTarget: !<Vec3> {x: 32.000000, y: -18.000000, z: -180.000000}
+      markerMesh: !<reference.RenderMesh> 00000000-0000-0000-0000-000000000000
+      markerMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
       maxRayDistanceCm: !<float> 500.000000
   ScriptTypes:
     -
       {}
   InputLines:
-    - // @input SceneObject cameraObject
+    - // @input Component.DeviceTracking deviceTracking
     - // @input SceneObject targetMarker
-    - "// @input vec3 previewDebugTarget = {32,-18,-180}"
+    - // @input Asset.RenderMesh markerMesh
+    - // @input Asset.Material markerMaterial
     - // @input float maxRayDistanceCm = 500

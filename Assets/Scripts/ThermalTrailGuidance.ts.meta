@@ -1,0 +1,73 @@
+- !<AssetImportMetadata/164aa059-b590-46e4-8cdf-8a11f6a11241>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 03d3e30f-fbbe-4ff9-8074-cc3ea700e163
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 03d3e30f-fbbe-4ff9-8074-cc3ea700e163
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 477eff78-69ce-4328-8c32-26d16ceb4ed9
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/477eff78-69ce-4328-8c32-26d16ceb4ed9>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 946fa0db-7d16-4968-9120-4e4b9d3ad73d
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    clusterCount: false
+    corridorWidthCm: false
+    crystalMaterial: false
+    deviceFloorBelowWearerCm: false
+    deviceTracking: false
+    flowCount: false
+    previewFloorBelowWearerCm: false
+    previewSurfaceOffsetCm: false
+    rerouteDistanceCm: false
+    trackedObject: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - trackedObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      deviceTracking: !<reference.DeviceTracking> 00000000-0000-0000-0000-000000000000
+      crystalMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      clusterCount: !<float> 24.000000
+      flowCount: !<float> 6.000000
+      corridorWidthCm: !<float> 24.000000
+      previewSurfaceOffsetCm: 0.800000
+      previewFloorBelowWearerCm: !<float> 68.000000
+      deviceFloorBelowWearerCm: !<float> 150.000000
+      rerouteDistanceCm: !<float> 55.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input SceneObject trackedObject
+    - // @input Component.DeviceTracking deviceTracking
+    - // @input Asset.Material crystalMaterial
+    - // @input float clusterCount = 24
+    - // @input float flowCount = 6
+    - // @input float corridorWidthCm = 24
+    - // @input float previewSurfaceOffsetCm = 0.8
+    - // @input float previewFloorBelowWearerCm = 68
+    - // @input float deviceFloorBelowWearerCm = 150
+    - // @input float rerouteDistanceCm = 55

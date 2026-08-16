@@ -28,14 +28,15 @@
   ExportUid: 00000000-0000-0000-0000-000000000000
   PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
+    captureProvider: false
     guidance: false
     locationResolver: false
     memory: false
-    previewUseAdversarialPath: false
+    memoryDrawer: false
     recognizer: false
     trackedObject: false
+    trailGuidance: false
     ui: false
-    visualGuidance: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
@@ -47,11 +48,12 @@
   DefaultScriptInputs:
     - ui: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
       recognizer: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
-      locationResolver: !<MappingBased.AssignableType_3> 00000000-0000-0000-0000-000000000000
-      memory: !<MappingBased.AssignableType_4> 00000000-0000-0000-0000-000000000000
-      guidance: !<MappingBased.AssignableType_5> 00000000-0000-0000-0000-000000000000
-      visualGuidance: !<MappingBased.AssignableType_6> 00000000-0000-0000-0000-000000000000
-      previewUseAdversarialPath: false
+      captureProvider: !<MappingBased.AssignableType_3> 00000000-0000-0000-0000-000000000000
+      locationResolver: !<MappingBased.AssignableType_4> 00000000-0000-0000-0000-000000000000
+      memory: !<MappingBased.AssignableType_5> 00000000-0000-0000-0000-000000000000
+      memoryDrawer: !<MappingBased.AssignableType_6> 00000000-0000-0000-0000-000000000000
+      guidance: !<MappingBased.AssignableType_7> 00000000-0000-0000-0000-000000000000
+      trailGuidance: !<MappingBased.AssignableType_8> 00000000-0000-0000-0000-000000000000
       trackedObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
@@ -59,9 +61,10 @@
   InputLines:
     - // @input AssignableType_1 ui
     - // @input AssignableType_2 recognizer
-    - // @input AssignableType_3 locationResolver
-    - // @input AssignableType_4 memory
-    - // @input AssignableType_5 guidance
-    - // @input AssignableType_6 visualGuidance
-    - // @input bool previewUseAdversarialPath
+    - // @input AssignableType_3 captureProvider
+    - // @input AssignableType_4 locationResolver
+    - // @input AssignableType_5 memory
+    - // @input AssignableType_6 memoryDrawer
+    - // @input AssignableType_7 guidance
+    - // @input AssignableType_8 trailGuidance
     - // @input SceneObject trackedObject

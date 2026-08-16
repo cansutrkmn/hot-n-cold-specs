@@ -1,20 +1,20 @@
-- !<AssetImportMetadata/d02a1250-81b4-4ebe-83ff-a34b2aea0f77>
+- !<AssetImportMetadata/59450bde-24b3-4d0d-a3c5-cdbaea576c1a>
   ImportedAssetIds:
-    TypeScriptAsset: !<reference> 8e74df05-9799-4a89-b32a-e3f5ca991fc9
+    TypeScriptAsset: !<reference> c7afee17-e72a-453b-afd4-1aea32af7237
   ImporterName: TypeScriptAssetImporter
-  PrimaryAsset: !<reference> 8e74df05-9799-4a89-b32a-e3f5ca991fc9
+  PrimaryAsset: !<reference> c7afee17-e72a-453b-afd4-1aea32af7237
   PackageType: NotAPackage
   LegacyPackagePolicy: ~
   ExtraData:
     {}
   AssetDataMap:
-    TypeScriptAsset: !<own> a809b7eb-ecce-4afb-aaf5-88133b9f720b
+    TypeScriptAsset: !<own> 7ef1b0a9-0c8c-4163-bd68-e1d9d5bf1867
   DependentFiles:
     []
   ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-- !<TypeScriptAssetData/a809b7eb-ecce-4afb-aaf5-88133b9f720b>
+- !<TypeScriptAssetData/7ef1b0a9-0c8c-4163-bd68-e1d9d5bf1867>
   SvgIcon: ""
   SetupScript:
     code: ""
@@ -24,13 +24,11 @@
   VersionPatch: 0
   VersionPrerelease: ""
   UpdateOrder: 0
-  ComponentUid: c338d248-ff91-449f-9f5f-233b217294d2
+  ComponentUid: 19586ca9-cf41-403d-a274-8209733fa879
   ExportUid: 00000000-0000-0000-0000-000000000000
   PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
-    centralTolerance1000: false
-    geminiModel: false
-    minimumConfidence: false
+    store: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
@@ -40,13 +38,9 @@
   Attachments:
     []
   DefaultScriptInputs:
-    - geminiModel: gemini-2.0-flash
-      minimumConfidence: 0.450000
-      centralTolerance1000: !<float> 220.000000
+    - store: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
-    - '// @input string geminiModel = "gemini-2.5-flash"'
-    - // @input float minimumConfidence = 0.45
-    - // @input float centralTolerance1000 = 220
+    - // @input AssignableType_1 store

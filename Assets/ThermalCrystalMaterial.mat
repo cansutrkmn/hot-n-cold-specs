@@ -1,8 +1,8 @@
-- !<Material/01149373-d6c6-48f8-afe1-49697e21dc93>
+- !<Material/7bf19cc4-d686-47d5-bc23-618fe15e28d6>
   PackagePath: ""
   PassesInfo:
-    - !<own> 819c38fa-2503-4364-b62b-83dca796d595
-- !<PassInfo/819c38fa-2503-4364-b62b-83dca796d595>
+    - !<own> a3c195d0-739e-4ebe-972c-a3b20dec6cfa
+- !<PassInfo/a3c195d0-739e-4ebe-972c-a3b20dec6cfa>
   CachedProperties:
     - Port_Depth_N004:
         typeIdx: 1
@@ -61,7 +61,7 @@
     - Port_WorldTangent_N004:
         typeIdx: 4
         value: {x: 0.000000, y: 0.000000, z: 1.000000}
-  DepthWrite: true
+  DepthWrite: false
   DepthTest: true
   DepthFunction: LessEqual
   TwoSided: false
@@ -76,7 +76,7 @@
     - NODE_27_DROPLIST_ITEM 0
     - NODE_49_DROPLIST_ITEM 0
     - NODE_69_DROPLIST_ITEM 0
-  BlendMode: Disabled
+  BlendMode: Screen
   Properties:
     Port_Default_N204:
       typeIdx: 1
@@ -89,5 +89,5 @@
       value: 0
     baseColor:
       typeIdx: 5
-      value: {x: 0.120000, y: 0.480000, z: 1.000000, w: 1.000000}
+      value: {x: 0.040000, y: 0.700000, z: 1.000000, w: 1.000000}
   Pass: !<reference> 18b3f0cf-a0a9-44ac-8c99-6b35072b2c9f
